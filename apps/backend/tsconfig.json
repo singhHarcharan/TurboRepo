@@ -4,8 +4,15 @@
     "lib": ["ES2015"],
     "module": "NodeNext",
     "outDir": "./dist",
-    "rootDir": "./src" 
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@repo/*": ["../../packages/*/src"]
+    }
   },
+  "references": [
+    { "path": "../../packages/common" },
+  ],
   "exclude": ["node_modules"],
   "include": ["."]
 }
